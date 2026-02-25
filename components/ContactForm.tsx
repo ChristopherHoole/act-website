@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const API_URL = 'https://act-website-fawn.vercel.app/api/leads';
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,11 +14,85 @@ export default function ContactForm() {
     phone: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: POST to /api/leads when endpoint is ready
-    alert("Form submitted! (Will POST to /api/leads when backend is ready)");
+    
+    // Reset states
+    setIsError(false);
+    setErrorMessage("");
+    
+    // Client-side validation
+    if (!formData.name.trim() || !formData.email.trim()) {
+      setIsError(true);
+      setErrorMessage("Name and email are required.");
+      return;
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setIsError(true);
+      setErrorMessage("Please enter a valid email address.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      // Map lookingFor to looking_for for API compatibility
+      const payload = {
+        name: formData.name.trim(),
+        company: formData.company.trim(),
+        role: formData.role,
+        looking_for: formData.lookingFor,
+        email: formData.email.trim(),
+        phone: formData.phone.trim()
+      };
+
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Success
+      setIsSuccess(true);
+      
+      // Clear form
+      setFormData({
+        name: "",
+        company: "",
+        role: "",
+        lookingFor: "",
+        email: "",
+        phone: ""
+      });
+
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 5000);
+
+    } catch (error) {
+      setIsError(true);
+      setErrorMessage("Something went wrong. Please try again or email us directly at chrishoole101@gmail.com");
+      console.error('Form submission error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -53,6 +129,30 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* LEFT: Contact Form */}
           <div>
+            {/* Success Message */}
+            {isSuccess && (
+              <div className="mb-6 p-4 bg-green-900/30 border border-green-500/50 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <p className="text-green-100 font-mono text-[14px] m-0">
+                    Thank you! We'll be in touch soon.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {isError && (
+              <div className="mb-6 p-4 bg-red-900/30 border border-red-500/50 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-400 text-xl">✕</span>
+                  <p className="text-red-100 font-mono text-[14px] m-0">
+                    {errorMessage}
+                  </p>
+                </div>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="bg-[#1e293b] border border-[#334155] rounded-lg p-8">
               {/* Name */}
               <div className="mb-5">
@@ -67,6 +167,7 @@ export default function ContactForm() {
                   required
                   placeholder="Your name"
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 />
               </div>
 
@@ -83,6 +184,7 @@ export default function ContactForm() {
                   required
                   placeholder="Company name"
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 />
               </div>
 
@@ -97,6 +199,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 >
                   <option value="">Select your role</option>
                   <option value="agency-owner">Agency owner</option>
@@ -117,6 +220,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 >
                   <option value="">Select engagement type</option>
                   <option value="freelancer">Freelancer (direct)</option>
@@ -139,6 +243,7 @@ export default function ContactForm() {
                   required
                   placeholder="your@email.com"
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 />
               </div>
 
@@ -154,15 +259,17 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder="+44 7999 500 184"
                   className="w-full bg-dark border border-[#334155] rounded px-3 py-3 text-[13px] text-[#f1f5f9] font-mono focus:outline-none focus:border-primary"
+                  disabled={isLoading}
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3.5 text-[12px] uppercase tracking-widest rounded font-mono hover:bg-blue-600 transition-colors"
+                disabled={isLoading}
+                className="w-full bg-primary text-white py-3.5 text-[12px] uppercase tracking-widest rounded font-mono hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit Application
+                {isLoading ? "Sending..." : "Submit Application"}
               </button>
 
               {/* Note */}
