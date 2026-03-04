@@ -71,7 +71,9 @@ export default function ContactForm() {
       // Fire Google Ads conversion event
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          send_to: 'AW-17991847021/CONTACT_FORM_SUBMIT',
+          send_to: 'AW-17991847021/rU4mCO76vIIcEO2Yl4ND',
+          value: 1.0,
+          currency: 'GBP',
         });
       }
 
