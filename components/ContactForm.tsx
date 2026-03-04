@@ -68,6 +68,13 @@ export default function ContactForm() {
 
       const data = await response.json();
 
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-17991847021/CONTACT_FORM_SUBMIT',
+        });
+      }
+
       // Success
       setIsSuccess(true);
       
