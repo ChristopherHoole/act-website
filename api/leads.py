@@ -140,36 +140,44 @@ def validate_lead_data(data):
 def get_sheets_client():
     """
     Initialize and return authenticated Google Sheets client.
-    
+
+    Reads credentials from GOOGLE_CREDENTIALS_JSON env var (Vercel deployment)
+    or falls back to a local file for development.
+
     Returns:
         gspread.Client
     """
-    # Get absolute path to credentials file
-    # In Vercel, files are in /var/task/api/
+    scopes = ['https://www.googleapis.com/auth/spreadsheets']
+
+    # 1. Try environment variable first (Vercel — file is gitignored)
+    creds_json = os.environ.get('GOOGLE_CREDENTIALS_JSON')
+    if creds_json:
+        creds_info = json.loads(creds_json)
+        creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
+        return gspread.authorize(creds)
+
+    # 2. Fall back to local file for development
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # Try multiple possible credential paths
     possible_paths = [
-        os.path.join(script_dir, CREDENTIALS_FILE),  # Same directory as this file
-        os.path.join(script_dir, '..', CREDENTIALS_FILE),  # Parent directory
-        CREDENTIALS_FILE  # Current working directory
+        os.path.join(script_dir, CREDENTIALS_FILE),
+        os.path.join(script_dir, '..', CREDENTIALS_FILE),
+        CREDENTIALS_FILE
     ]
-    
+
     creds_path = None
     for path in possible_paths:
         if os.path.exists(path):
             creds_path = path
             break
-    
+
     if not creds_path:
-        raise FileNotFoundError(f"Credentials file not found. Tried: {possible_paths}")
-    
-    # Authenticate with service account
-    scopes = ['https://www.googleapis.com/auth/spreadsheets']
+        raise FileNotFoundError(
+            "Google credentials not found. Set GOOGLE_CREDENTIALS_JSON env var "
+            f"or place {CREDENTIALS_FILE} alongside this file."
+        )
+
     creds = Credentials.from_service_account_file(creds_path, scopes=scopes)
-    client = gspread.authorize(creds)
-    
-    return client
+    return gspread.authorize(creds)
 
 
 def write_lead_to_sheet(lead_data, ip_address, user_agent):
