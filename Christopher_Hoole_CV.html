@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christopher Hoole — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Georgia:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:     #2563eb;
+    --blue-lt:  #eff6ff;
+    --blue-mid: #bfdbfe;
+    --dark:     #0f172a;
+    --mid:      #334155;
+    --muted:    #64748b;
+    --rule:     #e2e8f0;
+    --bg:       #ffffff;
+    --sidebar:  #f8fafc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .page {
+    background: var(--bg);
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    display: grid;
+    grid-template-columns: 1fr 72mm;
+    grid-template-rows: auto 1fr;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    grid-column: 1 / -1;
+    background: var(--dark);
+    padding: 28px 32px 22px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+    border-bottom: 3px solid var(--blue);
+  }
+
+  .header-name {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .header-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #93c5fd;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .header-contact {
+    text-align: right;
+  }
+
+  .contact-item {
+    font-size: 10px;
+    color: #cbd5e1;
+    line-height: 1.9;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .contact-item span {
+    color: #60a5fa;
+    font-weight: 500;
+  }
+
+  /* ── ACT BADGE in header ── */
+  .act-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(37,99,235,0.25);
+    border: 1px solid rgba(96,165,250,0.4);
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-top: 10px;
+    font-size: 9px;
+    color: #93c5fd;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .act-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 6px #22c55e;
+  }
+
+  /* ── MAIN COLUMN ── */
+  .main {
+    padding: 24px 28px 24px 32px;
+    border-right: 1px solid var(--rule);
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--sidebar);
+    padding: 24px 20px;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  .section-label {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--blue-mid);
+  }
+
+  /* ── PROFILE ── */
+  .profile-text {
+    font-size: 9.5px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .profile-highlight {
+    background: var(--blue-lt);
+    border-left: 3px solid var(--blue);
+    padding: 8px 12px;
+    font-size: 9px;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  /* ── JOB ── */
+  .job { margin-bottom: 16px; }
+
+  .job-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .job-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .job-dates {
+    font-size: 8.5px;
+    color: var(--blue);
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .job-company {
+    font-size: 9px;
+    color: var(--muted);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .job-bullets {
+    list-style: none;
+  }
+
+  .job-bullets li {
+    font-size: 9px;
+    color: var(--mid);
+    line-height: 1.6;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 2px;
+  }
+
+  .job-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-size: 8px;
+    top: 1px;
+  }
+
+  .job + .job {
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* ── SIDEBAR STATS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: normal;
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 7.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  /* ── ACT PROJECT CARD ── */
+  .act-card {
+    background: var(--dark);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .act-card-title {
+    font-size: 9px;
+    font-weight: 700;
+    color: #93c5fd;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .act-card-name {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    color: white;
+    margin-bottom: 6px;
+  }
+
+  .act-card-desc {
+    font-size: 8px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .act-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .act-tag {
+    background: rgba(37,99,235,0.3);
+    border: 1px solid rgba(96,165,250,0.3);
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 7px;
+    color: #93c5fd;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ── SKILL BLOCKS ── */
+  .skill-block { margin-bottom: 16px; }
+
+  .skill-name {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+
+  .skill-detail {
+    font-size: 8.5px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    background: var(--blue-lt);
+    color: var(--blue);
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 7.5px;
+    font-weight: 600;
+  }
+
+  /* ── LANGUAGES ── */
+  .lang-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .lang-name {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .lang-level {
+    font-size: 8px;
+    color: var(--muted);
+  }
+
+  .lang-bar {
+    height: 3px;
+    background: var(--rule);
+    border-radius: 2px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .lang-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), #60a5fa);
+    border-radius: 2px;
+  }
+
+  /* ── AVAILABILITY PILL ── */
+  .avail-pill {
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 8.5px;
+    font-weight: 700;
+    color: #166534;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+  }
+
+  .avail-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 4px;
+    box-shadow: 0 0 4px #22c55e;
+  }
+
+  /* ── SECTION SPACER ── */
+  .section { margin-bottom: 20px; }
+
+  /* print */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="header-name">Christopher Hoole</div>
+      <div class="header-title">Digital Marketing Specialist &nbsp;·&nbsp; Google Ads Expert &nbsp;·&nbsp; 16 Years Experience</div>
+      <div class="act-badge">
+        <span class="act-dot"></span>
+        Creator of Ads Control Tower (A.C.T) — AI-Powered Google Ads Optimisation Platform
+      </div>
+    </div>
+    <div class="header-contact">
+      <div class="contact-item"><span>📧</span> chrishoole101@gmail.com</div>
+      <div class="contact-item"><span>📱</span> +44 7999 500 184</div>
+      <div class="contact-item"><span>🌐</span> christopherhoole.online</div>
+      <div class="contact-item"><span>📍</span> United Kingdom</div>
+    </div>
+  </div>
+
+  <!-- MAIN COLUMN -->
+  <div class="main">
+
+    <!-- PROFILE -->
+    <div class="section">
+      <div class="section-label">Profile</div>
+      <p class="profile-text">
+        Multi-disciplined international digital marketing specialist with 16+ years of hands-on and management experience across Paid Ads, Paid Social, Email Marketing, Native Advertising, Copywriting and Website builds. I have been at the forefront of digital marketing since 2009 and have been an early adopter of advanced techniques — creating unique digital marketing methods of my own.
+      </p>
+      <div class="profile-highlight">
+        Most recently built <strong>Ads Control Tower (A.C.T)</strong> — a proprietary AI-powered Google Ads optimisation platform automating bid, budget and keyword decisions across 5 campaign types with full audit trail, human oversight and rollback capabilities. 41 optimisation rules. 1,492 active recommendations.
+      </div>
+    </div>
+
+    <!-- WORK HISTORY -->
+    <div class="section">
+      <div class="section-label">Work History</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Paid Ads Account Manager</div>
+          <div class="job-dates">Nov 2023 – Oct 2025</div>
+        </div>
+        <div class="job-company">Pod Digital Marketing Agency</div>
+        <ul class="job-bullets">
+          <li>Managed up to 8 clients simultaneously across Search, Shopping and Performance Max</li>
+          <li>Dramatically improved ROAS and inbound lead count across all accounts</li>
+          <li>Introduced new marketing techniques and funnels to all but 1 client</li>
+          <li>Upgraded client analytics and reporting infrastructure across the board</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Digital Marketing Manager</div>
+          <div class="job-dates">Mar 2022 – Oct 2023</div>
+        </div>
+        <div class="job-company">Virgin Media O2 Business &nbsp;(via agency)</div>
+        <ul class="job-bullets">
+          <li>Created and executed a migration plan to bring all paid ad accounts in-house</li>
+          <li>Designed full end-to-end, always-on, omni-channel digital marketing funnel</li>
+          <li>Grew B2B inbound leads from <strong>0 to 2,000 per month</strong></li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Digital Marketing Consultant</div>
+          <div class="job-dates">Jul 2021 – Feb 2022</div>
+        </div>
+        <div class="job-company">TMW Unlimited Agency &nbsp;(Lexus &amp; Toyota)</div>
+        <ul class="job-bullets">
+          <li>Increased traffic to local dealership sites by <strong>500%+</strong> with the same marketing spend</li>
+          <li>Increased lead volume and test-drive requests by over <strong>100%</strong></li>
+          <li>Overhauled Toyota's entire tracking and attribution — removed overinflated conversion numbers</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Digital Marketing Consultant</div>
+          <div class="job-dates">Apr 2017 – Apr 2020</div>
+        </div>
+        <div class="job-company">Destinology.co.uk &nbsp;(Luxury Travel)</div>
+        <ul class="job-bullets">
+          <li>Reduced Google Ads new business CPL from <strong>£120 to £45</strong></li>
+          <li>Implemented geo-targeting campaigns targeting HNWI areas (£500k+ house prices)</li>
+          <li>Hired, trained and mentored a team of Paid Ads executives</li>
+          <li>Oversaw eCRM migration — reduced costs by <strong>60%+</strong></li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Lead Acquisition Manager</div>
+          <div class="job-dates">Nov 2015 – Mar 2017</div>
+        </div>
+        <div class="job-company">Select Property Group</div>
+        <ul class="job-bullets">
+          <li>Part of the team that delivered <strong>£35M+ revenue</strong> in a single month — 120% increase on company record</li>
+          <li>Delivered high-converting leads from UK HNWIs and global markets (HK, Singapore, Dubai, USA, Canada)</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Digital Marketing Manager</div>
+          <div class="job-dates">Jul 2014 – Oct 2015</div>
+        </div>
+        <div class="job-company">SixStarHolidays</div>
+        <ul class="job-bullets">
+          <li>Increased lead volume <strong>120%</strong> with only a 12% budget increase</li>
+          <li>Reduced paid ads acquisition cost from <strong>£100+ to £36</strong></li>
+          <li>Built the fastest-growing social media presence in the UK travel industry</li>
+          <li>Grew email database from 200,000 to 300,000 organically in 9 months</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">CEO &amp; Founder</div>
+          <div class="job-dates">Jan 2009 – Mar 2014</div>
+        </div>
+        <div class="job-company">Apple Copywriting Agency</div>
+        <ul class="job-bullets">
+          <li>Built from 1-man operation to 8 in-house staff and 40+ freelancers</li>
+          <li>Grew revenue from <strong>£0 to £800,000 p/a</strong> within 2 years</li>
+          <li>Designed and project-managed a bespoke CMS for copywriting and project management</li>
+        </ul>
+      </div>
+
+    </div><!-- /section -->
+  </div><!-- /main -->
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">By The Numbers</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">16</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">£50M+</div>
+          <div class="stat-label">Ad Spend Managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">200+</div>
+          <div class="stat-label">Accounts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">8</div>
+          <div class="stat-label">Clients in Parallel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A.C.T PROJECT -->
+    <div class="section">
+      <div class="section-label">Featured Project</div>
+      <div class="act-card">
+        <div class="act-card-title">Built from Scratch</div>
+        <div class="act-card-name">Ads Control Tower (A.C.T)</div>
+        <div class="act-card-desc">
+          Proprietary AI-powered platform automating Google Ads campaign management. 41 rules. 1,492 live recommendations. Full audit trail &amp; rollback.
+        </div>
+        <div class="act-tags">
+          <span class="act-tag">Python</span>
+          <span class="act-tag">Flask</span>
+          <span class="act-tag">Google Ads API</span>
+          <span class="act-tag">DuckDB</span>
+          <span class="act-tag">AI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAID ADS -->
+    <div class="section">
+      <div class="section-label">Paid Advertising</div>
+      <div class="skill-block">
+        <div class="skill-name">Google Ads</div>
+        <div class="skill-tags">
+          <span class="tag">Search</span><span class="tag">PMAX</span>
+          <span class="tag">Shopping</span><span class="tag">Display</span>
+        </div>
+        <div class="skill-detail" style="margin-top:4px;">Since 2009 — 16 years</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-name">Paid Social</div>
+        <div class="skill-tags">
+          <span class="tag">Meta</span><span class="tag">LinkedIn</span>
+          <span class="tag">TikTok</span><span class="tag">Twitter/X</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-name">Native &amp; Display</div>
+        <div class="skill-detail">Taboola, Outbrain, Content Syndication</div>
+      </div>
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="section">
+      <div class="section-label">Analytics</div>
+      <div class="skill-tags" style="gap:4px;">
+        <span class="tag">GA4</span><span class="tag">GTM</span>
+        <span class="tag">Looker Studio</span><span class="tag">GSC</span>
+        <span class="tag">Triple Whale</span><span class="tag">Hyros</span>
+        <span class="tag">SEMrush</span>
+      </div>
+    </div>
+
+    <!-- PLATFORMS -->
+    <div class="section">
+      <div class="section-label">Platforms</div>
+      <div class="skill-tags" style="gap:4px;">
+        <span class="tag">Shopify</span><span class="tag">HubSpot</span>
+        <span class="tag">Salesforce</span><span class="tag">Klaviyo</span>
+        <span class="tag">BigCommerce</span><span class="tag">WordPress</span>
+        <span class="tag">Pardot</span><span class="tag">Mailchimp</span>
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="section">
+      <div class="section-label">Languages</div>
+      <div class="lang-row">
+        <span class="lang-name">English</span>
+        <span class="lang-level">Native</span>
+      </div>
+      <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
+      <div class="lang-row">
+        <span class="lang-name">Portuguese</span>
+        <span class="lang-level">Fluent</span>
+      </div>
+      <div class="lang-bar"><div class="lang-bar-fill" style="width:85%"></div></div>
+      <div class="lang-row">
+        <span class="lang-name">Spanish</span>
+        <span class="lang-level">Basic</span>
+      </div>
+      <div class="lang-bar"><div class="lang-bar-fill" style="width:30%"></div></div>
+    </div>
+
+    <!-- AVAILABILITY -->
+    <div class="section">
+      <div class="section-label">Availability</div>
+      <div class="avail-pill">
+        <span class="avail-dot"></span>
+        Available Immediately
+      </div>
+      <div class="skill-detail" style="margin-top:8px; font-size:8px; line-height:1.6; color:#64748b;">
+        Open to contract, freelance or permanent roles. UK-based. Available for remote work globally. USA &amp; UK preferred.
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+</div><!-- /page -->
+</body>
+</html>

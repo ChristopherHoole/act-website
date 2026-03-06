@@ -19,10 +19,10 @@ export default function WhatACTDoes() {
 
         {/* Intro paragraph - max-width 1020px */}
         <div className="max-w-[1020px] mb-8">
-          <p className="text-body-light">
+          <p className="text-body-light font-mono">
             A.C.T is my proprietary Google Ads AI engine.
             <br />
-            It's not a product for sale — it's my internal competitive advantage.
+            It&apos;s not a product for sale — it&apos;s my internal competitive advantage.
           </p>
         </div>
 
@@ -30,12 +30,12 @@ export default function WhatACTDoes() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           {/* Module 1: Lighthouse */}
           <div className="bg-white border border-[#e2e8f0] border-l-4 border-l-primary rounded-lg p-6">
-            <div className="text-[20px] font-bold text-[#0f172a] mb-1">Lighthouse</div>
-            <div className="text-[18px] text-primary mb-3">Diagnostics & Insights</div>
-            <div className="text-[16px] text-[#64748b] leading-[1.6] mb-3">
+            <div className="text-[20px] font-bold text-[#0f172a] mb-1 font-mono">Lighthouse</div>
+            <div className="text-[18px] text-primary mb-3 font-mono font-bold">Diagnostics & Insights</div>
+            <div className="text-[16px] font-bold text-[#0f172a] leading-[1.6] mb-3 font-mono">
               Deep campaign analysis with 200+ calculated performance features.
             </div>
-            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5">
+            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5 font-mono">
               <li>Anomaly detection (spend spikes, CTR drops, conversion anomalies)</li>
               <li>Quality Score diagnostics and improvement recommendations</li>
               <li>Impression share analysis and recovery strategies</li>
@@ -46,12 +46,12 @@ export default function WhatACTDoes() {
 
           {/* Module 2: Radar */}
           <div className="bg-white border border-[#e2e8f0] border-l-4 border-l-primary rounded-lg p-6">
-            <div className="text-[20px] font-bold text-[#0f172a] mb-1">Radar</div>
-            <div className="text-[18px] text-primary mb-3">Monitoring & Protection</div>
-            <div className="text-[16px] text-[#64748b] leading-[1.6] mb-3">
+            <div className="text-[20px] font-bold text-[#0f172a] mb-1 font-mono">Radar</div>
+            <div className="text-[18px] text-primary mb-3 font-mono font-bold">Monitoring & Protection</div>
+            <div className="text-[16px] font-bold text-[#0f172a] leading-[1.6] mb-3 font-mono">
               Real-time performance monitoring with automatic safeguards.
             </div>
-            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5">
+            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5 font-mono">
               <li>Automatic rollback on KPI degradation (≥15% ROAS/CVR drop)</li>
               <li>Budget pacing alerts and spend spike detection</li>
               <li>Feed issue detection for Shopping campaigns</li>
@@ -62,32 +62,32 @@ export default function WhatACTDoes() {
 
           {/* Module 3: Flight Plan */}
           <div className="bg-white border border-[#e2e8f0] border-l-4 border-l-primary rounded-lg p-6">
-            <div className="text-[20px] font-bold text-[#0f172a] mb-1">Flight Plan</div>
-            <div className="text-[18px] text-primary mb-3">Experiments & Structured Testing</div>
-            <div className="text-[16px] text-[#64748b] leading-[1.6] mb-3">
+            <div className="text-[20px] font-bold text-[#0f172a] mb-1 font-mono">Flight Plan</div>
+            <div className="text-[18px] text-primary mb-3 font-mono font-bold">Experiments & Structured Testing</div>
+            <div className="text-[16px] font-bold text-[#0f172a] leading-[1.6] mb-3 font-mono">
               Hypothesis-driven testing framework. No random tweaks.
             </div>
-            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5">
+            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5 font-mono">
               <li>Structured experiment design and rollout</li>
               <li>A/B test setup with clear success criteria</li>
               <li>Statistical significance validation</li>
               <li>Scale/iterate/rollback decisions based on results</li>
-              <li>Prevents "random busywork" — every change is a documented test</li>
+              <li>Prevents &ldquo;random busywork&rdquo; — every change is a documented test</li>
             </ul>
           </div>
 
           {/* Module 4: Autopilot */}
           <div className="bg-white border border-[#e2e8f0] border-l-4 border-l-primary rounded-lg p-6">
-            <div className="text-[20px] font-bold text-[#0f172a] mb-1">Autopilot</div>
-            <div className="text-[18px] text-primary mb-3">AI-Powered Optimization</div>
-            <div className="text-[16px] text-[#64748b] leading-[1.6] mb-3">
+            <div className="text-[20px] font-bold text-[#0f172a] mb-1 font-mono">Autopilot</div>
+            <div className="text-[18px] text-primary mb-3 font-mono font-bold">AI-Powered Optimization</div>
+            <div className="text-[16px] font-bold text-[#0f172a] leading-[1.6] mb-3 font-mono">
               40+ optimization rules with safety guardrails and human oversight.
             </div>
-            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5">
+            <ul className="list-disc list-inside text-[16px] text-[#0f172a] leading-[1.8] space-y-1.5 font-mono">
               <li>Budget, bid, campaign status, keyword, ad, and Shopping optimizations</li>
               <li>Constitution safety framework (magnitude limits, cooldown periods, data sufficiency)</li>
               <li>Risk-tiered changes (low/medium/high with appropriate review)</li>
-              <li>Human-in-the-loop approval — A.C.T recommends, you decide</li>
+              <li>Human-in-the-loop approval — A.C.T recommends, I decide</li>
               <li>Full change preview before execution</li>
             </ul>
           </div>
@@ -95,8 +95,8 @@ export default function WhatACTDoes() {
 
         {/* Additional Capabilities Box */}
         <div className="p-6 bg-[#f8fafc] border border-[#e2e8f0] rounded-lg">
-          <div className="text-[20px] font-bold text-[#0f172a] mb-3">Additional Capabilities</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-[16px] text-[#0f172a] leading-[1.7]">
+          <div className="text-[20px] font-bold text-[#0f172a] mb-3 font-mono">Additional Capabilities</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-[14px] text-[#0f172a] leading-[1.7] font-mono">
             <div>
               <strong className="text-[#0f172a]">Multi-Campaign Support:</strong> Search, Shopping, Performance Max, Display (Video/Demand Gen coming soon)
             </div>

@@ -17,10 +17,10 @@ export default function TheProblem() {
           Most Google Ads management looks the same.
         </h3>
 
-        {/* Intro paragraph - max-width 1020px */}
-        <div className="max-w-[1020px] mb-8">
+        {/* Intro paragraph - full width so sentence stays on one line */}
+        <div className="mb-8">
           <p className="text-body-light">
-            If you're spending £5k–£50k/month on Google Ads and wondering why results feel opaque, you're not alone.
+            If you&apos;re spending £5k–£50k/month on Google Ads and wondering why results feel opaque, you&apos;re not alone.
           </p>
         </div>
 
@@ -29,33 +29,39 @@ export default function TheProblem() {
           {/* Card 1 */}
           <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
             <div className="text-[32px] mb-3">🎲</div>
-            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2">
+            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2 font-mono">
               Random tweaks without a system
             </h4>
-            <p className="text-[19px] text-[#0f172a] leading-[1.6] m-0">
-              Changes made on gut feel. No hypothesis. No accountability.
+            <p className="text-[16px] text-[#0f172a] leading-[1.6] m-0 font-mono">
+              Changes made on gut feel.<br />
+              No hypothesis.<br />
+              No accountability.
             </p>
           </div>
 
           {/* Card 2 */}
           <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
             <div className="text-[32px] mb-3">📋</div>
-            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2">
+            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2 font-mono">
               No change log, no audit trail
             </h4>
-            <p className="text-[19px] text-[#0f172a] leading-[1.6] m-0">
-              Nobody can tell you what changed last month, why, or what the outcome was.
+            <p className="text-[16px] text-[#0f172a] leading-[1.6] m-0 font-mono">
+              Nobody can tell you what changed last month.<br />
+              Why it changed.<br />
+              Or what the outcome was.<br />
+              All you get are tables full of metrics.
             </p>
           </div>
 
           {/* Card 3 */}
           <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
             <div className="text-[32px] mb-3">🤖</div>
-            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2">
-              AI as a buzzword, not a tool
+            <h4 className="text-[20px] font-bold text-[#0f172a] mb-2 font-mono">
+              AI is used as a buzzword, not a tool
             </h4>
-            <p className="text-[19px] text-[#0f172a] leading-[1.6] m-0">
-              "AI-powered" on the pitch. Generic automation in practice.
+            <p className="text-[16px] text-[#0f172a] leading-[1.6] m-0 font-mono">
+              &ldquo;AI-powered&rdquo; on the pitch.<br />
+              Generic automation in practice.
             </p>
           </div>
         </div>

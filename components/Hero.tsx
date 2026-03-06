@@ -326,14 +326,15 @@ export default function Hero() {
           I&apos;m <span className="text-primary">Christopher Hoole</span>
         </div>
         <h2 className="text-[38px] font-bold text-[#f8fafc] leading-[1.1] mb-6 tracking-tight font-mono">
-          Google Ads, Managed with <span className="text-primary">AI Precision</span>.
+          Managed Google Ads with <span className="text-primary">AI Precision</span>.
         </h2>
         <p className="text-body-dark mb-9">
           16 years of paid ads experience.
           <br />
-          One proprietary AI engine.
+          My own proprietary AI engine called A.C.T.
           <br />
-          Most managers work the same way, so I built my own AI engine.
+          <br />
+          My approach combines my expertise with A.C.T.&apos;s AI-powered recommendations, providing a systematic and explainable approach to Google Ads management.
         </p>
         <div className="flex gap-4 items-center mb-6">
           <button
@@ -345,17 +346,14 @@ export default function Hero() {
                 window.scrollTo({ top: targetPosition, behavior: "smooth" });
               }
             }}
-            className="bg-primary text-white px-7 py-3.5 font-mono text-[11px] uppercase tracking-widest rounded hover:bg-blue-600 transition-colors"
+            className="bg-primary text-white px-7 py-3.5 font-mono text-[14px] uppercase tracking-widest rounded hover:bg-blue-600 transition-colors"
           >
             Let&apos;s Discuss Your Paid Ads
           </button>
-          <button className="text-[#475569] font-mono text-[11px] uppercase tracking-widest border border-border-dark px-7 py-3.5 rounded bg-transparent hover:border-primary hover:text-primary transition-colors">
+          <button className="text-[#475569] font-mono text-[14px] uppercase tracking-widest border border-border-dark px-7 py-3.5 rounded bg-transparent hover:border-primary hover:text-primary transition-colors">
             See How It Works ↓
           </button>
         </div>
-        <p className="font-mono text-[10px] text-[#334155] tracking-wide">
-          <span className="text-primary">Maximum 4 clients.</span> Currently accepting agency partnerships.
-        </p>
       </div>
       <div className="relative w-[494px] h-[598px] flex-shrink-0 z-10 rounded overflow-hidden cursor-crosshair">
         <div ref={containerRef} className="absolute inset-0 w-full h-full"></div>
@@ -368,11 +366,11 @@ export default function Hero() {
           ↑ hover to reveal A.C.T
         </div>
       </div>
-      
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-10">
         <div className="font-mono text-[18px] text-white tracking-[2px]">Scroll</div>
-        <div className="w-[3px] h-10 bg-gradient-to-b from-primary to-transparent animate-pulse-slow"></div>
+        <div className="w-[6px] h-10 bg-gradient-to-b from-primary to-transparent animate-pulse-slow"></div>
       </div>
     </section>
   );
