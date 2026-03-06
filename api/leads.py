@@ -199,8 +199,8 @@ def write_lead_to_sheet(lead_data, ip_address, user_agent):
         lead_data.get('name', ''),
         lead_data.get('email', ''),
         lead_data.get('company', ''),
-        lead_data.get('role', ''),
-        lead_data.get('looking_for', ''),
+        '',   # role — no longer collected, keep column for sheet compatibility
+        '',   # looking_for — no longer collected, keep column for sheet compatibility
         lead_data.get('phone', ''),
         ip_address,
         user_agent[:500],  # Limit user agent length

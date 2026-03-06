@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const API_URL = 'https://act-website-fawn.vercel.app/api/leads';
+const API_URL = '/api/leads';
 const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%27m%20interested%20in%20discussing%20my%20Google%20Ads%20account.';
 
 export default function ContactForm() {
