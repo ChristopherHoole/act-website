@@ -57,8 +57,8 @@ export default function ContactForm() {
       // Fire Google Ads conversion event
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          send_to: 'AW-17991847021/rU4mCO76vIIcEO2Yl4ND',
-          value: 1.0,
+          send_to: 'AW-17999377487/JpTKCKjpk4QcEM_o4oZD',
+          value: 40.00,
           currency: 'GBP',
         });
       }
@@ -272,7 +272,7 @@ export default function ContactForm() {
                     Deep dive into tracking, structure, and measurement. We fix the foundation before optimising.
                   </div>
                 </div>
-              </div>
+          </div>
             </div>
           </div>
 
