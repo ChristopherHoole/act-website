@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%27m%20interested%20in%20discussing%20my%20Google%20Ads%20account.';
 
 export default function Footer() {
@@ -132,6 +134,20 @@ export default function Footer() {
       <div className="py-4 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-3">
         <div className="font-mono text-[13px] text-[#475569]">
           © 2026 Christopher Hoole
+        </div>
+        <div className="flex items-center gap-6">
+          <Link
+            href="/privacy-policy"
+            className="font-mono text-[13px] text-[#475569] hover:text-[#94a3b8] transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="font-mono text-[13px] text-[#475569] hover:text-[#94a3b8] transition-colors"
+          >
+            Terms of Service
+          </Link>
         </div>
         <div className="font-mono text-[13px] text-[#475569]">
           Designed and Built by Christopher Hoole

@@ -1,3 +1,7 @@
+ifls lbdf ppfo ehqz
+
+
+
 I'm Christopher Hoole, a senior Google Ads specialist with 16 years of experience. 
 
 I've developed a proprietary AI engine called A.C.T. (Ads Control Tower) to manage Google Ads accounts with precision and data-driven insights. 
@@ -23,6 +27,8 @@ Experience the power of AI-driven precision and see your business soar.
 Don't just advertise; dominate the digital landscape with Christopher Hoole!
 
 
+
+
 I'm Christopher Hoole, a senior Google Ads specialist with 16 years of experience. 
 
 I've developed a proprietary AI engine called A.C.T. (Ads Control Tower) to manage Google Ads accounts with precision and data-driven insights. 
@@ -32,3 +38,18 @@ My approach combines my expertise with A.C.T.'s AI-powered recommendations, prov
 I work with a maximum of four clients to ensure personalized attention and a high level of service. 
 
 I specialize in Google Ads and offer a unique blend of human expertise and AI-driven optimization.
+
+
+Unlock the true potential of your Google Ads with Christopher Hoole! With 16 years of experience and a proprietary AI engine, he's not just a digital marketing consultant; he's a strategic partner. Tired of random tweaks and opaque results? Christopher's data-driven approach, using his AI engine, provides explainable recommendations and full accountability. He transforms your marketing efforts, ensuring every campaign is a success story. Experience the power of AI-driven precision and see your business soar. Don't just advertise; dominate the digital landscape with Christopher Hoole!
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17999377487"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17999377487');
+</script>
