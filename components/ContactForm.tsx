@@ -57,7 +57,7 @@ export default function ContactForm() {
       // Fire Google Ads conversion event
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          send_to: 'AW-17999377487/JpTKCKjpk4QcEM_o4oZD',
+          send_to: 'AW-180006514629/fxGxCNeunoYcEMW3lopD',
           value: 40.00,
           currency: 'GBP',
         });
@@ -69,7 +69,7 @@ export default function ContactForm() {
 
     } catch (error) {
       setIsError(true);
-      setErrorMessage("Something went wrong. Please try again or email us directly at chrishoole101@gmail.com");
+      setErrorMessage("Something went wrong. Please try again or email us directly at chris@christopherhoole.com");
       console.error('Form submission error:', error);
     } finally {
       setIsLoading(false);
