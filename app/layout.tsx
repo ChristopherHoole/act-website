@@ -3,11 +3,11 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Christopher Hoole — Senior Google Ads Specialist",
+  title: "Christopher Hoole — Freelance Google Ads Specialist",
   description: "Senior Google Ads Specialist with 16 years experience. Builder of A.C.T — an AI-powered Google Ads optimisation platform.",
   metadataBase: new URL("https://www.christopherhoole.online"),
   openGraph: {
-    title: "Christopher Hoole — Senior Google Ads Specialist",
+    title: "Christopher Hoole — Freelance Google Ads Specialist",
     description: "Senior Google Ads Specialist with 16 years experience. Builder of A.C.T — an AI-powered Google Ads optimisation platform.",
     url: "https://www.christopherhoole.online",
     siteName: "Christopher Hoole",
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Christopher Hoole — Senior Google Ads Specialist",
+        alt: "Christopher Hoole — Freelance Google Ads Specialist",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christopher Hoole — Senior Google Ads Specialist",
+    title: "Christopher Hoole — Freelance Google Ads Specialist",
     description: "Senior Google Ads Specialist with 16 years experience. Builder of A.C.T — an AI-powered Google Ads optimisation platform.",
     images: ["/og-image.jpg"],
   },
