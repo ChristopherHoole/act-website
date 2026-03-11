@@ -10,6 +10,7 @@ import WhyDifferent from "@/components/WhyDifferent";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <FAQ />
       <ContactForm />
       <Footer />
+      <WhatsAppFloat />
     </main>
   );
 }

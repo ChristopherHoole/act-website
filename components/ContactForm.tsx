@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const API_URL = '/api/leads';
-const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%27m%20interested%20in%20discussing%20my%20Google%20Ads%20account.';
+const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20found%20your%20contact%20form%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%27m%20interested%20in%20discussing%20my%20Google%20Ads%20account.';
+const WA_URL_BRAND = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
+const WA_URL_FOOTER = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20found%20your%20details%20in%20the%20footer%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
 
 export default function Footer() {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={WA_URL}
+            href={WA_URL_BRAND}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] text-white px-7 py-3.5 rounded-lg font-mono text-[12px] font-bold uppercase tracking-widest hover:bg-[#1eb857] transition-colors no-underline"
@@ -108,7 +109,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <span className="text-[18px]">💬</span>
                 <a
-                  href={WA_URL}
+                  href={WA_URL_FOOTER}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-[15px] text-[#25D366] hover:text-[#1eb857] transition-colors"
@@ -118,7 +119,7 @@ export default function Footer() {
               </div>
             </div>
             <a
-              href={WA_URL}
+              href={WA_URL_FOOTER}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-mono text-[12px] font-bold uppercase tracking-wider hover:bg-[#1eb857] transition-colors no-underline"
