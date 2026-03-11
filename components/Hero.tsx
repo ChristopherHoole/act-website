@@ -350,9 +350,13 @@ export default function Hero() {
           >
             Let&apos;s Discuss Your Paid Ads
           </button>
-          <button className="text-[#475569] font-mono text-[14px] uppercase tracking-widest border border-border-dark px-7 py-3.5 rounded bg-transparent hover:border-primary hover:text-primary transition-colors">
-            See How It Works ↓
-          </button>
+          <a
+            href="/Christopher_Hoole_CV_March_2026_V11.pdf"
+            download
+            className="text-white font-mono text-[14px] uppercase tracking-widest border border-white px-7 py-3.5 rounded bg-transparent hover:border-primary hover:text-primary transition-colors text-center"
+          >
+            Download My CV
+          </a>
         </div>
       </div>
       <div className="relative w-[494px] h-[598px] flex-shrink-0 z-10 rounded overflow-hidden cursor-crosshair">

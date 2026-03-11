@@ -49,6 +49,13 @@ export default function Navigation() {
         >
           A.C.T
         </button>
+        <a
+          href="/Christopher_Hoole_CV_March_2026_V11.pdf"
+          download
+          className="font-mono text-[14px] text-white border border-white px-5 py-2 rounded uppercase tracking-wider hover:border-primary hover:text-primary transition-colors hidden md:block"
+        >
+          Download CV
+        </a>
         <button
           onClick={() => scrollToSection("contact")}
           className="font-mono text-[14px] text-white bg-primary px-5 py-2 rounded uppercase tracking-wider hover:bg-blue-600 transition-colors"
