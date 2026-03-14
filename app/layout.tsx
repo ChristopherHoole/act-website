@@ -5,11 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Christopher Hoole — Freelance Google Ads Specialist",
   description: "Senior Google Ads Specialist with 16 years experience. Builder of A.C.T — an AI-powered Google Ads optimisation platform.",
-  metadataBase: new URL("https://www.christopherhoole.online"),
+  metadataBase: new URL("https://www.christopherhoole.com"),
   openGraph: {
     title: "Christopher Hoole — Freelance Google Ads Specialist",
     description: "Senior Google Ads Specialist with 16 years experience. Builder of A.C.T — an AI-powered Google Ads optimisation platform.",
-    url: "https://www.christopherhoole.online",
+    url: "https://www.christopherhoole.com",
     siteName: "Christopher Hoole",
     images: [
       {
@@ -44,7 +44,7 @@ export default function RootLayout({
       </head>
       <body>{children}</body>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-180006514629"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18006514629"
         strategy="afterInteractive"
       />
       <Script id="google-ads-gtag" strategy="afterInteractive">
@@ -52,7 +52,7 @@ export default function RootLayout({
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-180006514629');
+          gtag('config', 'AW-18006514629');
         `}
       </Script>
       <Script id="linkedin-insight" strategy="afterInteractive">
