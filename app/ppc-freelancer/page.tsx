@@ -110,13 +110,13 @@ export default function PPCFreelancerPage() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-12 items-center">
             <div>
               <div className="inline-block bg-[#1e3a5f] text-[#60a5fa] text-[14px] px-3 py-1 rounded border border-[#2563eb]/30 mb-4">
-                PPC Freelancer · Senior Level · Uk
+                PPC Freelancer · Senior Level · UK
               </div>
               <h1 className="font-serif text-[28px] md:text-[42px] font-bold text-white leading-[1.15] mb-5">
                 Hire a senior PPC freelancer who treats your account like his own
               </h1>
               <p className="text-[14px] text-white leading-[1.8] max-w-[500px] mb-7">
-                16 years. £50M+ managed. Maximum 4 clients. No agencies, no juniors, no account managers. Just a senior specialist fully focused on your results.
+                Senior PPC freelancer and Google Ads specialist with 16 years experience. £50M+ managed. Maximum 4 clients. No agencies, no juniors. Just a dedicated freelance PPC expert fully focused on your results.
               </p>
               {/* Buttons — desktop only (shown inline with text column) */}
               <div className="hidden md:flex flex-wrap gap-3">
@@ -166,17 +166,17 @@ export default function PPCFreelancerPage() {
             What you get as a PPC freelancer client
           </h2>
           <p className="text-[14px] text-white leading-[1.8] mb-8 max-w-[620px]">
-            Not a retainer. Not a report. A senior specialist running your account every single week.
+            Not a retainer. Not a report. A senior freelance PPC manager running your Google Ads account every single week.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
                 title: "Full PPC Campaign Management",
-                body: "Search, Shopping, and Display campaigns managed end-to-end. Strategy, structure, keywords, bids, ads, and reporting — all handled.",
+                body: "As your freelance PPC manager, I handle Search, Shopping, and Display campaigns end-to-end. Strategy, structure, keywords, bids, ads, and reporting — all handled.",
               },
               {
                 title: "Keyword Strategy & Negative Management",
-                body: "Ongoing keyword expansion, match type optimisation, and negative keyword management to eliminate wasted spend every week.",
+                body: "Ongoing keyword expansion, match type optimisation, and negative keyword management. As a specialist Google Ads freelancer, I eliminate wasted spend every single week.",
               },
               {
                 title: "Bid & Budget Optimisation",
@@ -196,6 +196,29 @@ export default function PPCFreelancerPage() {
         </div>
       </section>
 
+      {/* ── FREELANCE PPC SERVICES ── */}
+      <section className="bg-[#0f172a] py-[72px] px-6 md:px-10 border-t border-[#1e293b]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-6 h-px bg-[#2563eb]"></div>
+            <h3 className="text-[20px] font-bold tracking-[1px] text-[#60a5fa] m-0">Freelance PPC services</h3>
+          </div>
+          <h2 className="font-serif text-[30px] font-bold text-white leading-[1.2] mb-4">
+            What a freelance PPC specialist does differently
+          </h2>
+          <p className="text-[14px] text-white leading-[1.8] mb-7 max-w-[620px]">
+            Hiring a freelance PPC manager means your account gets senior attention every day — not handed to a junior exec at an agency.
+          </p>
+          <div className="space-y-2 mb-7">
+            <div className="text-[14px] text-white"><span className="text-[#2563eb] mr-2">→</span>As your freelance PPC consultant, I audit, restructure, and optimise your Google Ads account from day one.</div>
+            <div className="text-[14px] text-white"><span className="text-[#2563eb] mr-2">→</span>Every change is logged. Every decision is explained. No black box — you always know what your freelance Google Ads manager is doing and why.</div>
+            <div className="text-[14px] text-white"><span className="text-[#2563eb] mr-2">→</span>From keyword research to bid strategy, a dedicated freelance PPC expert handles the full account — not just the easy parts.</div>
+            <div className="text-[14px] text-white"><span className="text-[#2563eb] mr-2">→</span>Unlike agencies that rotate staff, you always work directly with the same senior PPC freelancer.</div>
+          </div>
+          <a href="#audit" className="bg-[#2563eb] text-white text-[14px] font-bold px-7 py-[14px] rounded-lg no-underline inline-block">Get a free PPC audit →</a>
+        </div>
+      </section>
+
       {/* ── ABOUT ME ── */}
       <section id="about" className="bg-[#0f172a] py-[72px] px-6 md:px-10">
         <div className="max-w-[1100px] mx-auto">
@@ -208,13 +231,13 @@ export default function PPCFreelancerPage() {
           </h2>
           <div className="max-w-[820px]">
             <p className="text-[14px] text-white leading-[1.85] mb-4">
-              Over 16 years I&apos;ve worked across automotive (Lexus, Toyota), luxury travel, B2B (Virgin Media O2), ecommerce, property, and professional services. I&apos;ve managed budgets from £5k to £400k per month and optimised 200+ accounts.
+              As a freelance PPC consultant and Google Ads specialist, I&apos;ve worked across automotive (Lexus, Toyota), luxury travel, B2B (Virgin Media O2), ecommerce, property, and professional services over 16 years. I&apos;ve managed budgets from £5k to £400k per month and optimised 200+ accounts as a freelance PPC manager and specialist.
             </p>
             <p className="text-[14px] text-white leading-[1.85] mb-4">
               Over the past few years I noticed something: almost every Google Ads manager works the same way. Random tweaks. No systematic approach. No audit trails. No real Ai leverage.
             </p>
             <p className="text-[14px] text-white leading-[1.85] mb-5">
-              So I spent 18 months building my own Google Ads Ai engine called <strong>A.C.T (Ads Control Tower)</strong>. My approach: data-driven, explainable, guardrailed recommendations.
+              So I spent 18 months building my own Google Ads AI engine called <strong>A.C.T (Ads Control Tower)</strong>. As a freelance PPC expert, my approach is data-driven, explainable, and guardrailed — not reckless automation.
             </p>
             <div className="space-y-2 mb-7">
               <div className="text-[14px] text-white"><span className="text-[#2563eb] mr-2">→</span>I build, A.C.T recommends, I review and approve or disapprove.</div>
@@ -325,7 +348,7 @@ export default function PPCFreelancerPage() {
             <h3 className="text-[20px] font-bold tracking-[1px] text-[#2563eb] m-0">Why not an agency</h3>
           </div>
           <h2 className="font-serif text-[30px] font-bold text-[#0f172a] leading-[1.2] mb-4">
-            Why a senior PPC freelancer beats an agency
+            Why a senior PPC freelancer and Google Ads specialist beats an agency
           </h2>
           <p className="text-[14px] text-[#0f172a] leading-[1.8] mb-8 max-w-[620px]">
             You&apos;ve probably been burned before. Here&apos;s the honest comparison.
@@ -544,15 +567,15 @@ export default function PPCFreelancerPage() {
 function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
   const faqs = [
-    { q: "What size accounts do you work with?", a: "£5k–£100k/month ad spend. You need enough budget for the data to be meaningful and for A.C.T's insights to have impact." },
-    { q: "What do you not do?", a: "Social ads, Seo, creative production, landing page design. Google Ads only. I'm a specialist, not a generalist." },
-    { q: "How is this different from hiring an agency?", a: "At an agency, your account is managed by a junior exec across 30+ other accounts. With me, you get 16 years of senior experience, maximum 4 clients, and a proprietary Ai engine built specifically for this. No account managers, no handoffs, no diluted attention." },
-    { q: "Is A.C.T a SaaS product I can buy?", a: "No. A.C.T is my internal tool. It's my competitive advantage, not a product for sale. You get access through working with me." },
-    { q: "Can I see A.C.T in action?", a: "Yes. I demo it on the fit call. You'll see the dashboard, recommendations, change log, and reporting live." },
-    { q: "What if my performance drops while working with you?", a: "A.C.T's Radar module monitors every change and automatically rolls back anything that causes Kpi degradation. I also review performance daily. If something goes wrong, I know about it fast and I fix it fast — with a full audit trail of what happened and why." },
-    { q: "Can you take over an existing account or do you start from scratch?", a: "Both. Most clients come with an existing account. The first 2 weeks are an audit — I find what's broken, what's wasted, and what's working. We fix the foundation before touching spend." },
-    { q: "Can you work with my existing agency or team?", a: "Yes. I work as freelancer (direct), partner (collaborative), or white-label (behind the scenes). Flexible models depending on your setup." },
-    { q: "What's the minimum commitment?", a: "3 months. The first month is audit and foundation. Months 2 and 3 is where performance improvement happens. After that, month-to-month only — no lock-in." },
+    { q: "What size accounts do you work with?", a: "I work with UK businesses spending between £2,000 and £100,000 per month on Google Ads. As a freelance PPC manager, I focus on accounts where senior specialist attention makes a meaningful difference to results." },
+    { q: "What do you not do?", a: "I don't manage Meta Ads, TikTok, or programmatic as a primary service. I'm a Google Ads freelancer — Search, Shopping, and Performance Max is my focus. I don't work with accounts spending under £2,000/month." },
+    { q: "How is this different from hiring an agency?", a: "At an agency, your account is managed by a junior PPC executive handling 30+ accounts. As a freelance PPC consultant, I personally manage every account I take on. Maximum 4 clients. Senior expertise on every account, every day." },
+    { q: "Is A.C.T a SaaS product I can buy?", a: "No. A.C.T is my proprietary Google Ads AI engine — it's my competitive advantage as a freelance PPC specialist, not a product for sale. Every client benefits from it, but it's not available separately." },
+    { q: "Can I see A.C.T in action?", a: "Yes — I demo A.C.T live on every fit call. You'll see the dashboard, the recommendations, and the reasoning behind every change. It's one of the key differences between working with a freelance Google Ads manager like me versus a standard agency." },
+    { q: "What if my performance drops while working with you?", a: "A.C.T has automatic rollback triggers — if KPIs degrade by 15% or more, the system flags it immediately. As your freelance PPC expert, I review every alert and act fast. You're never left wondering what happened." },
+    { q: "Can you take over an existing account or do you start from scratch?", a: "Both. Most clients come to me with existing Google Ads accounts. As a freelance PPC consultant, I start with a 2-week onboarding audit — fixing tracking, restructuring where needed, and building a clear optimisation plan before making any changes." },
+    { q: "Can you work with my existing agency or team?", a: "Yes. Some clients use me as their dedicated Google Ads freelancer while keeping their broader agency for other channels. I can work alongside existing teams with clear scope separation." },
+    { q: "What's the minimum commitment?", a: "There's no minimum contract. I don't believe in locking clients in. As a freelance PPC manager, I'd rather earn your trust month by month. Most clients stay long-term because the results speak for themselves." },
   ];
   return (
     <div className="max-w-[700px] mt-7">
@@ -562,7 +585,7 @@ function FaqSection() {
             <span className="font-mono text-[14px] font-bold text-[#0f172a]">{faq.q}</span>
             <span className="text-[#2563eb] text-[14px] leading-none flex-shrink-0" style={{transform: open === i ? "rotate(45deg)" : "none", transition: "transform .2s"}}>+</span>
           </button>
-          {open === i && <div className="pb-4 font-mono text-[14px] text-[#0f172a] leading-[1.75]">{faq.a}</div>}
+          <div className={`pb-4 font-mono text-[14px] text-[#0f172a] leading-[1.75]${open === i ? "" : " hidden"}`}>{faq.a}</div>
         </div>
       ))}
     </div>
