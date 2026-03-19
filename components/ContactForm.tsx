@@ -5,6 +5,19 @@ import { useState } from "react";
 const API_URL = '/api/leads';
 const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20found%20your%20contact%20form%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
 
+const trackWhatsApp = (label: string) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'whatsapp_click', {
+      event_category: 'engagement',
+      event_label: label,
+    });
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18006514629/whatsapp_click',
+      event_label: label,
+    });
+  }
+};
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -54,9 +67,13 @@ export default function ContactForm() {
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-      // Fire Google Ads conversion event
-      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
+      // Fire GA4 + Google Ads conversion events
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'conversion',
+          event_label: 'homepage - contact form',
+        });
+        (window as any).gtag('event', 'conversion', {
           send_to: 'AW-18006514629/fxGxCNeunoYcEMW3lopD',
           value: 40.00,
           currency: 'GBP',
@@ -121,6 +138,7 @@ export default function ContactForm() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsApp('homepage - contact')}
               className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-lg font-mono text-[13px] font-bold uppercase tracking-widest hover:bg-[#1eb857] transition-colors no-underline"
             >
               <span className="text-[22px]">💬</span>

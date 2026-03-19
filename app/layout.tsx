@@ -53,6 +53,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'AW-18006514629');
+          gtag('config', 'G-YK75LP5620');
         `}
       </Script>
       <Script id="linkedin-insight" strategy="afterInteractive">

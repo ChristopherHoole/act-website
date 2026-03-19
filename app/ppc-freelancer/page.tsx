@@ -29,6 +29,42 @@ export default function PPCFreelancerPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const trackWhatsApp = (label: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: label,
+      });
+      (window as any).gtag('event', 'conversion', {
+        send_to: 'AW-18006514629/whatsapp_click',
+        event_label: label,
+      });
+    }
+  };
+
+  const trackPhone = (page: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: page,
+      });
+    }
+  };
+
+  const trackFormSubmit = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'form_submit', {
+        event_category: 'conversion',
+        event_label: 'ppc-freelancer - contact form',
+      });
+      (window as any).gtag('event', 'conversion', {
+        send_to: 'AW-18006514629/fxGxCNeunoYcEMW3lopD',
+        value: 40.0,
+        currency: 'GBP',
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsError(false);
@@ -65,14 +101,7 @@ export default function PPCFreelancerPage() {
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-      // Fire Google Ads conversion — exact same as ContactForm.tsx
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-18006514629/fxGxCNeunoYcEMW3lopD",
-          value: 40.0,
-          currency: "GBP",
-        });
-      }
+      trackFormSubmit();
 
       setIsSuccess(true);
       setFormData({ name: "", company: "", email: "", phone: "", budget: "" });
@@ -421,7 +450,7 @@ export default function PPCFreelancerPage() {
               <p className="font-mono text-[14px] font-bold text-[#16a34a] mt-2">+44 7999 500 184</p>
             </div>
             <div className="flex flex-col items-center gap-1.5 flex-shrink-0">
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 bg-[#25D366] text-white px-7 py-[14px] rounded-lg font-mono text-[14px] font-bold no-underline">💬 Message on WhatsApp</a>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('ppc-freelancer - contact')} className="inline-flex items-center gap-2.5 bg-[#25D366] text-white px-7 py-[14px] rounded-lg font-mono text-[14px] font-bold no-underline">💬 Message on WhatsApp</a>
               <span className="font-mono text-[14px] text-[#16a34a]">⚡ Fastest response</span>
             </div>
           </div>
@@ -507,6 +536,7 @@ export default function PPCFreelancerPage() {
         href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsApp('ppc-freelancer - floating')}
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:bg-[#1eb857] transition-colors"
         aria-label="Message on WhatsApp"
       >
@@ -525,7 +555,7 @@ export default function PPCFreelancerPage() {
           </h3>
           <p className="font-mono text-[14px] text-white mb-6">Maximum 4 clients. Currently accepting new partnerships.</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-lg font-mono text-[14px] font-bold no-underline">💬 Message on WhatsApp</a>
+            <a href={WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('ppc-freelancer - footer')} className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-lg font-mono text-[14px] font-bold no-underline">💬 Message on WhatsApp</a>
             <a href="#audit" className="inline-flex items-center gap-2 bg-[#2563eb] text-white px-6 py-3.5 rounded-lg font-mono text-[14px] font-bold no-underline">Let&apos;s discuss your paid ads</a>
           </div>
         </div>
@@ -546,7 +576,7 @@ export default function PPCFreelancerPage() {
           </div>
           <div>
             <div className="font-mono text-[14px] font-bold text-[#60a5fa] mb-3">Get in touch</div>
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="block font-mono text-[14px] text-[#25D366] no-underline mb-2">💬 WhatsApp +44 7999 500 184</a>
+            <a href={WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('ppc-freelancer - footer')} className="block font-mono text-[14px] text-[#25D366] no-underline mb-2">💬 WhatsApp +44 7999 500 184</a>
             <a href="https://www.linkedin.com/in/christopherhooleuk/" target="_blank" rel="noopener noreferrer" className="block font-mono text-[14px] text-white no-underline">🔗 LinkedIn</a>
           </div>
         </div>

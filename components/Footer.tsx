@@ -1,7 +1,22 @@
+"use client";
+
 import Link from "next/link";
 
 const WA_URL_BRAND = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
 const WA_URL_FOOTER = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%20found%20your%20details%20in%20the%20footer%20and%20I%27d%20like%20to%20discuss%20my%20Google%20Ads.';
+
+const trackWhatsApp = (label: string) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'whatsapp_click', {
+      event_category: 'engagement',
+      event_label: label,
+    });
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18006514629/whatsapp_click',
+      event_label: label,
+    });
+  }
+};
 
 export default function Footer() {
   return (
@@ -21,6 +36,7 @@ export default function Footer() {
             href={WA_URL_BRAND}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsApp('homepage - footer')}
             className="inline-flex items-center gap-3 bg-[#25D366] text-white px-7 py-3.5 rounded-lg font-mono text-[12px] font-bold uppercase tracking-widest hover:bg-[#1eb857] transition-colors no-underline"
           >
             <span className="text-[18px]">💬</span>
@@ -112,6 +128,7 @@ export default function Footer() {
                   href={WA_URL_FOOTER}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp('homepage - footer')}
                   className="font-mono text-[15px] text-[#25D366] hover:text-[#1eb857] transition-colors"
                 >
                   WhatsApp — +44 7999 500 184
@@ -122,6 +139,7 @@ export default function Footer() {
               href={WA_URL_FOOTER}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsApp('homepage - footer')}
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-mono text-[12px] font-bold uppercase tracking-wider hover:bg-[#1eb857] transition-colors no-underline"
             >
               <span>💬</span> Message on WhatsApp

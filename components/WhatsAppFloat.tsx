@@ -2,6 +2,19 @@
 
 const WA_URL = 'https://wa.me/447999500184?text=Hi%20Christopher%2C%20I%27d%20like%20to%20discuss%20my%20Google%20Ads%20account.';
 
+const trackWhatsApp = (label: string) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'whatsapp_click', {
+      event_category: 'engagement',
+      event_label: label,
+    });
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18006514629/whatsapp_click',
+      event_label: label,
+    });
+  }
+};
+
 export default function WhatsAppFloat() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -11,6 +24,7 @@ export default function WhatsAppFloat() {
         href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsApp('homepage - floating')}
         aria-label="Message on WhatsApp"
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1eb857] transition-colors shadow-lg"
       >
