@@ -1,16 +1,16 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import AboutMe from "@/components/AboutMe";
-import TheProblem from "@/components/TheProblem";
-import TheDifference from "@/components/TheDifference";
-import WorkHistory from "@/components/WorkHistory";
-import Skills from "@/components/Skills";
-import WhatACTDoes from "@/components/WhatACTDoes";
-import WhyDifferent from "@/components/WhyDifferent";
-import FAQ from "@/components/FAQ";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Navigation from "@/components/archive/NavigationOriginal";
+import Hero from "@/components/archive/HeroOriginal";
+import AboutMe from "@/components/archive/AboutMeOriginal";
+import TheProblem from "@/components/archive/TheProblemOriginal";
+import TheDifference from "@/components/archive/TheDifferenceOriginal";
+import WorkHistory from "@/components/archive/WorkHistoryOriginal";
+import Skills from "@/components/archive/SkillsOriginal";
+import WhatACTDoes from "@/components/archive/WhatACTDoesOriginal";
+import WhyDifferent from "@/components/archive/WhyDifferentOriginal";
+import FAQ from "@/components/archive/FAQOriginal";
+import ContactForm from "@/components/archive/ContactFormOriginal";
+import Footer from "@/components/archive/FooterOriginal";
+import WhatsAppFloat from "@/components/archive/WhatsAppFloatOriginal";
 
 export default function HpCopy1() {
   return (
