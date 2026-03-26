@@ -11,7 +11,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-export default function Home() {
+export default function RecruiterAudience() {
   return (
     <main>
       <Navigation />

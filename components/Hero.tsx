@@ -314,18 +314,18 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen bg-dark flex items-center justify-center gap-12 px-6 md:px-20 relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-dark flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 md:px-20 pt-20 md:pt-0 relative overflow-hidden">
       <div className="flex-1 max-w-[520px] z-10 relative">
         <div className="flex items-center gap-2.5 mb-5">
           <div className="w-6 h-px bg-primary"></div>
-          <h1 className="font-mono text-[20px] font-bold uppercase tracking-[2.5px] text-primary m-0">
+          <h1 className="font-mono text-[14px] md:text-[20px] font-bold uppercase tracking-[2.5px] text-primary m-0">
             Senior Google Ads Specialist
           </h1>
         </div>
-        <div className="text-[52px] font-bold text-[#f8fafc] leading-[1.1] mb-5 tracking-tight font-mono">
+        <div className="text-[32px] md:text-[52px] font-bold text-[#f8fafc] leading-[1.1] mb-5 tracking-tight font-mono">
           I&apos;m <span className="text-primary">Christopher Hoole</span>
         </div>
-        <h2 className="text-[38px] font-bold text-[#f8fafc] leading-[1.1] mb-6 tracking-tight font-mono">
+        <h2 className="text-[24px] md:text-[38px] font-bold text-[#f8fafc] leading-[1.1] mb-6 tracking-tight font-mono">
           Managed Google Ads with <span className="text-primary">AI Precision</span>.
         </h2>
         <p className="text-body-dark mb-9">
@@ -336,7 +336,7 @@ export default function Hero() {
           <br />
           My approach combines my expertise with A.C.T.&apos;s AI-powered recommendations, providing a systematic and explainable approach to Google Ads management.
         </p>
-        <div className="flex gap-4 items-center mb-6">
+        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-6">
           <button
             onClick={() => {
               const el = document.getElementById("contact");
@@ -348,10 +348,10 @@ export default function Hero() {
             }}
             className="bg-primary text-white px-7 py-3.5 font-mono text-[14px] uppercase tracking-widest rounded hover:bg-blue-600 transition-colors"
           >
-            Let&apos;s Discuss Your Paid Ads
+            Get in Touch
           </button>
           <a
-            href="/Christopher_Hoole_CV_March_2026_V11.pdf"
+            href="/Christopher_Hoole_CV_March_2026.pdf"
             download
             className="text-white font-mono text-[14px] uppercase tracking-widest border border-white px-7 py-3.5 rounded bg-transparent hover:border-primary hover:text-primary transition-colors text-center"
           >
@@ -359,7 +359,12 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="relative w-[494px] h-[598px] flex-shrink-0 z-10 rounded overflow-hidden cursor-crosshair">
+      {/* Mobile-only static headshot */}
+      <div className="block md:hidden z-10 w-[250px] h-[300px] rounded overflow-hidden">
+        <img src="/chris_headshot_1.jpg" alt="Christopher Hoole" className="w-full h-full object-cover object-top" />
+      </div>
+      {/* Desktop-only Three.js interactive canvas */}
+      <div className="hidden md:block relative w-[494px] h-[598px] flex-shrink-0 z-10 rounded overflow-hidden cursor-crosshair">
         <div ref={containerRef} className="absolute inset-0 w-full h-full"></div>
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center font-mono text-[11px] text-border-dark uppercase tracking-wide z-5 bg-dark">
@@ -372,7 +377,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+      <div className="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 z-10">
         <div className="font-mono text-[18px] text-white tracking-[2px]">Scroll</div>
         <div className="w-[6px] h-10 bg-gradient-to-b from-primary to-transparent animate-pulse-slow"></div>
       </div>

@@ -111,12 +111,12 @@ export default function ContactForm() {
 
         {/* Heading */}
         <h3 className="text-[36px] font-bold text-[#f8fafc] leading-[1.2] mb-5 font-serif">
-          Let&apos;s Discuss Your Paid Ads
+          Get in Touch
         </h3>
 
         {/* Intro */}
-        <p className="text-[14px] text-[#94a3b8] mb-10 font-mono max-w-[700px]">
-          Whether you&apos;re an agency looking for a partner or an in-house team needing senior oversight, let&apos;s talk.
+        <p className="text-[16px] text-white mb-10 font-mono">
+          Whether you&apos;re a recruiter, hiring manager or agency, I&apos;d love to hear about the role.
         </p>
 
         {/* WhatsApp hero CTA */}
@@ -125,10 +125,10 @@ export default function ContactForm() {
             <h4 className="font-mono text-[22px] font-bold text-[#15803d] mb-2">
               Message me directly on WhatsApp
             </h4>
-            <p className="font-mono text-[13px] text-[#16a34a] leading-relaxed mb-1">
+            <p className="font-sans text-[16px] text-[#16a34a] leading-relaxed mb-1">
               Fastest way to reach me. I respond promptly during business hours.
             </p>
-            <p className="font-mono text-[13px] text-[#16a34a]">
+            <p className="font-sans text-[16px] text-[#16a34a]">
               Send your name, company, and what you&apos;re looking for.
             </p>
             <p className="font-mono text-[12px] text-[#16a34a] mt-2">+44 7999 500 184</p>
@@ -151,14 +151,12 @@ export default function ContactForm() {
         {/* Divider */}
         <div className="flex items-center gap-4 mb-8">
           <div className="flex-1 h-px bg-[#334155]"></div>
-          <span className="font-mono text-[11px] text-[#475569] uppercase tracking-widest">Or send me a message</span>
+          <span className="font-mono text-[11px] text-white uppercase tracking-widest">Or send me a message</span>
           <div className="flex-1 h-px bg-[#334155]"></div>
         </div>
 
-        {/* Form + What happens next */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
-          {/* LEFT: Form */}
+        {/* Form */}
+        <div className="max-w-[600px]">
           <div>
             {/* Success */}
             {isSuccess && (
@@ -181,13 +179,13 @@ export default function ContactForm() {
             )}
 
             <form onSubmit={handleSubmit} className="bg-[#1e293b] border border-[#334155] rounded-lg p-8">
-              <div className="font-mono text-[13px] font-bold text-[#64748b] uppercase tracking-wider mb-6">
+              <div className="font-mono text-[13px] font-bold text-white uppercase tracking-wider mb-6">
                 Prefer email? Send me a message
               </div>
 
               {/* Name */}
               <div className="mb-5">
-                <label className="block text-[12px] text-[#94a3b8] mb-1.5 uppercase tracking-wide font-mono">Name *</label>
+                <label className="block text-[12px] text-white mb-1.5 uppercase tracking-wide font-mono">Name *</label>
                 <input
                   type="text"
                   name="name"
@@ -202,7 +200,7 @@ export default function ContactForm() {
 
               {/* Company */}
               <div className="mb-5">
-                <label className="block text-[12px] text-[#94a3b8] mb-1.5 uppercase tracking-wide font-mono">Company *</label>
+                <label className="block text-[12px] text-white mb-1.5 uppercase tracking-wide font-mono">Company *</label>
                 <input
                   type="text"
                   name="company"
@@ -217,7 +215,7 @@ export default function ContactForm() {
 
               {/* Email */}
               <div className="mb-5">
-                <label className="block text-[12px] text-[#94a3b8] mb-1.5 uppercase tracking-wide font-mono">Email *</label>
+                <label className="block text-[12px] text-white mb-1.5 uppercase tracking-wide font-mono">Email *</label>
                 <input
                   type="email"
                   name="email"
@@ -232,7 +230,7 @@ export default function ContactForm() {
 
               {/* Phone */}
               <div className="mb-6">
-                <label className="block text-[12px] text-[#94a3b8] mb-1.5 uppercase tracking-wide font-mono">Phone (optional)</label>
+                <label className="block text-[12px] text-white mb-1.5 uppercase tracking-wide font-mono">Phone (optional)</label>
                 <input
                   type="tel"
                   name="phone"
@@ -254,46 +252,6 @@ export default function ContactForm() {
               </button>
             </form>
           </div>
-
-          {/* RIGHT: What happens next */}
-          <div>
-            <div className="text-[14px] font-bold text-[#64748b] uppercase tracking-wider font-mono mb-6">
-              What happens next:
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex gap-5">
-                <div className="w-10 h-10 rounded-full bg-primary text-white text-[16px] font-bold flex items-center justify-center flex-shrink-0 font-mono">1</div>
-                <div>
-                  <div className="text-[18px] font-bold text-[#f8fafc] mb-1.5 font-mono">I review your application</div>
-                  <div className="text-[14px] text-[#94a3b8] leading-[1.7] font-mono">
-                    I review based on account size and goals to assess if there&apos;s a good fit.
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="w-10 h-10 rounded-full bg-primary text-white text-[16px] font-bold flex items-center justify-center flex-shrink-0 font-mono">2</div>
-                <div>
-                  <div className="text-[18px] font-bold text-[#f8fafc] mb-1.5 font-mono">Fit call (30 min)</div>
-                  <div className="text-[14px] text-[#94a3b8] leading-[1.7] font-mono">
-                    Discuss your account, current challenges, and goals. I&apos;ll demo A.C.T and show you the dashboard live.
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="w-10 h-10 rounded-full bg-primary text-white text-[16px] font-bold flex items-center justify-center flex-shrink-0 font-mono">3</div>
-                <div>
-                  <div className="text-[18px] font-bold text-[#f8fafc] mb-1.5 font-mono">Onboarding audit (2 weeks)</div>
-                  <div className="text-[14px] text-[#94a3b8] leading-[1.7] font-mono">
-                    Deep dive into tracking, structure, and measurement. We fix the foundation before optimising.
-                  </div>
-                </div>
-          </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

@@ -25,11 +25,13 @@ export default function Footer() {
       {/* ===== BRAND STATEMENT ===== */}
       <div className="py-16 px-6 md:px-20 text-center border-b border-[#1e293b]">
         <h3 className="text-[32px] font-bold text-[#f8fafc] leading-[1.3] mb-4 font-serif">
-          16 years of experience.<br />
-          <span className="text-primary">Proprietary AI.</span> Zero compromises.
+          16 years.<br />
+          100+ accounts.<br />
+          £50M+ managed.<br />
+          <span className="text-primary">Available now.</span>
         </h3>
-        <p className="font-mono text-[15px] text-[#94a3b8] mb-8">
-          Maximum 4 clients. Currently accepting new partnerships.
+        <p className="font-sans text-[16px] text-[#f8fafc] mb-8">
+          Available immediately. Open to contract, freelance or permanent.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
@@ -46,7 +48,7 @@ export default function Footer() {
             href="#contact"
             className="inline-flex items-center gap-3 bg-primary text-white px-7 py-3.5 rounded-lg font-mono text-[12px] font-bold uppercase tracking-widest hover:bg-blue-600 transition-colors no-underline"
           >
-            Let&apos;s Discuss Your Paid Ads
+            Get in Touch
           </a>
         </div>
       </div>
@@ -72,10 +74,10 @@ export default function Footer() {
                 Christopher Hoole
               </div>
             </div>
-            <div className="font-mono text-[14px] text-[#94a3b8] leading-relaxed">
-              Senior Google Ads management.<br />
+            <div className="font-sans text-[16px] text-[#f8fafc] leading-relaxed">
+              Senior Google Ads Specialist.<br />
               Proprietary AI engine.<br />
-              Maximum 4 clients.
+              Available immediately.
             </div>
           </div>
 
@@ -96,7 +98,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-mono text-[15px] text-[#94a3b8] hover:text-[#f8fafc] transition-colors"
+                    className="font-mono text-[15px] text-[#f8fafc] hover:text-[#f8fafc] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -117,7 +119,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/christopherhooleuk/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[15px] text-[#94a3b8] hover:text-[#f8fafc] transition-colors"
+                  className="font-mono text-[15px] text-[#f8fafc] hover:text-[#f8fafc] transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -151,24 +153,24 @@ export default function Footer() {
 
       {/* ===== BOTTOM STRIP ===== */}
       <div className="py-4 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-3">
-        <div className="font-mono text-[13px] text-[#475569]">
+        <div className="font-mono text-[13px] text-[#f8fafc]">
           © 2026 Christopher Hoole
         </div>
         <div className="flex items-center gap-6">
           <Link
             href="/privacy-policy"
-            className="font-mono text-[13px] text-[#475569] hover:text-[#94a3b8] transition-colors"
+            className="font-mono text-[13px] text-[#f8fafc] hover:text-[#f8fafc] transition-colors"
           >
             Privacy Policy
           </Link>
           <Link
             href="/terms"
-            className="font-mono text-[13px] text-[#475569] hover:text-[#94a3b8] transition-colors"
+            className="font-mono text-[13px] text-[#f8fafc] hover:text-[#f8fafc] transition-colors"
           >
             Terms of Service
           </Link>
         </div>
-        <div className="font-mono text-[13px] text-[#475569]">
+        <div className="font-mono text-[13px] text-[#f8fafc]">
           Designed and Built by Christopher Hoole
         </div>
       </div>

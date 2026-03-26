@@ -28,11 +28,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Founder & Developer — Ads Control Tower (A.C.T)</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Founder & Developer — Ads Control Tower (A.C.T)</div>
                   <div className="font-mono text-[14px] text-primary">2025–Present</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Independent</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Built a proprietary AI-powered Google Ads optimisation platform from scratch. A.C.T automates bid, budget, keyword and campaign decisions across 5 entity types with full audit trail, safety guardrails and rollback capabilities. 41 active optimisation rules. 1,492 live recommendations. Built using Python, Flask, DuckDB and the Google Ads API. Live at christopherhoole.online.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Independent</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Built a proprietary AI-powered Google Ads optimisation platform from scratch. A.C.T generates bid, budget, keyword and campaign recommendations across 5 entity types with full audit trail, safety guardrails and rollback capabilities. 75 rules, 99 monitoring flags, 507 live recommendations. Built using Python, Flask, DuckDB and the Google Ads API. Live at christopherhoole.online.</div>
               </div>
             </div>
 
@@ -41,11 +41,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Paid Ads Account Manager</div>
-                  <div className="font-mono text-[14px] text-primary">2023–2025</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Paid Ads Account Manager</div>
+                  <div className="font-mono text-[14px] text-primary">Nov 2023–Feb 2026</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Pod Digital Marketing Agency</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Managed up to 8 clients in parallel across Google Search, Shopping and Performance Max. Dramatically improved ROAS and inbound lead count across all accounts. Introduced new Google Ads techniques and funnel structures to all but 1 client. Upgraded client analytics and reporting infrastructure across the board.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Pod Digital Marketing Agency</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Managed up to 8 clients in parallel across Google Search, Shopping and Performance Max. Dramatically improved ROAS and inbound lead count across all accounts. Introduced new Google Ads techniques and funnel structures to all but 1 client. Upgraded client analytics and reporting infrastructure across the board.</div>
               </div>
             </div>
 
@@ -54,11 +54,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Digital Marketing Manager</div>
-                  <div className="font-mono text-[14px] text-primary">2022–2023</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Digital Marketing Manager</div>
+                  <div className="font-mono text-[14px] text-primary">Mar 2022–Oct 2023</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Virgin Media O2 Business</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Created and executed a migration plan to bring all Google Ads accounts in-house. Designed full end-to-end, always-on, omni-channel digital marketing funnel. Grew B2B inbound leads from 0 to 2,000 per month primarily through Google Ads.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Virgin Media O2 Business (18 month contract via agency)</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Created and executed a migration plan to bring all Google Ads accounts in-house. Designed full end-to-end, always-on, omni-channel digital marketing funnel. Grew B2B inbound leads from 0 to 2,000 per month primarily through Google Ads.</div>
               </div>
             </div>
 
@@ -67,37 +67,24 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Digital Marketing Consultant</div>
-                  <div className="font-mono text-[14px] text-primary">2021–2022</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Digital Marketing Consultant</div>
+                  <div className="font-mono text-[14px] text-primary">May 2020–Feb 2022</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">TMW Unlimited Agency (Lexus & Toyota)</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Increased traffic to local dealership sites by 500%+ with the same Google Ads spend. Increased lead volume and test-drive requests by over 100%. Overhauled Toyota&apos;s entire Google Ads tracking and attribution system.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">TMW Unlimited Agency (Lexus & Toyota) (6 month contract)</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Increased traffic to local dealership sites by 500%+ with the same Google Ads spend. Increased lead volume and test-drive requests by over 100%. Overhauled Toyota&apos;s entire Google Ads tracking and attribution system.</div>
               </div>
             </div>
 
-            {/* Timeline Item 5 - MarisaPeer */}
+            {/* Timeline Item 5 - Destinology */}
             <div className="relative md:pl-12">
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Funnel Builder</div>
-                  <div className="font-mono text-[14px] text-primary">2020–2021</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Digital Marketing Consultant</div>
+                  <div className="font-mono text-[14px] text-primary">Apr 2017–Apr 2020</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">MarisaPeer.com</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Built and optimised high-converting Google Ads funnels for a global coaching brand.</div>
-              </div>
-            </div>
-
-            {/* Timeline Item 6 - Destinology */}
-            <div className="relative md:pl-12">
-              <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
-              <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Digital Marketing Consultant</div>
-                  <div className="font-mono text-[14px] text-primary">2017–2020</div>
-                </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Destinology.co.uk</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Reduced Google Ads new business CPL from £120 to £45 (63% reduction). Implemented geo-targeting campaigns targeting HNWI areas. Hired, trained and mentored a team of Paid Ads executives. Oversaw eCRM migration and reduced costs by 60%+.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Destinology.co.uk</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Reduced Google Ads new business CPL from £120 to £45 (63% reduction). Implemented geo-targeting campaigns targeting HNWI areas. Hired, trained and mentored a team of Paid Ads executives. Oversaw eCRM migration and reduced costs by 60%+.</div>
               </div>
             </div>
 
@@ -106,11 +93,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Lead Acquisition Manager</div>
-                  <div className="font-mono text-[14px] text-primary">2015–2017</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Lead Acquisition Manager</div>
+                  <div className="font-mono text-[14px] text-primary">Nov 2015–Mar 2017</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Select Property Group</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Brought all Google Ads and digital marketing channels in-house. Part of the team that delivered £35M+ revenue in March 2016 (120% increase on record). Delivered high-converting leads from UK HNWIs and global markets (HK, Singapore, Dubai, USA, Canada).</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Select Property Group</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Brought all Google Ads and digital marketing channels in-house. Part of the team that delivered £35M+ revenue in March 2016 (120% increase on record). Delivered high-converting leads from UK HNWIs and global markets (HK, Singapore, Dubai, USA, Canada).</div>
               </div>
             </div>
 
@@ -119,11 +106,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">Digital Marketing Manager</div>
-                  <div className="font-mono text-[14px] text-primary">2014–2015</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">Digital Marketing Manager</div>
+                  <div className="font-mono text-[14px] text-primary">Jul 2014–Oct 2015</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">SixStarHolidays</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Increased Google Ads lead volume 120% with only a 12% budget increase. Reduced paid ads new customer acquisition cost from £100+ to £36. Built the fastest-growing social media presence in the UK travel industry. Grew email database from 200,000 to 300,000 organically in 9 months.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">SixStarHolidays</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Increased Google Ads lead volume 120% with only a 12% budget increase. Reduced paid ads new customer acquisition cost from £100+ to £36. Built the fastest-growing social media presence in the UK travel industry. Grew email database from 200,000 to 300,000 organically in 9 months.</div>
               </div>
             </div>
 
@@ -132,11 +119,11 @@ export default function WorkHistory() {
               <div className="hidden md:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-[14px] h-[14px] rounded-full bg-primary border-2 border-white"></div>
               <div className="bg-white border border-[#e2e8f0] rounded-lg p-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <div className="text-[16px] font-bold text-[#0f172a] mb-2 md:mb-0">CEO & Founder</div>
-                  <div className="font-mono text-[14px] text-primary">2009–2014</div>
+                  <div className="text-[20px] font-bold text-[#0f172a] mb-2 md:mb-0 font-mono">CEO & Founder</div>
+                  <div className="font-mono text-[14px] text-primary">Jan 2009–Mar 2014</div>
                 </div>
-                <div className="text-[13px] text-[#64748b] mb-2">Apple Copywriting Agency</div>
-                <div className="text-[13px] text-[#64748b] leading-[1.6]">Built from a 1-man operation to 8 in-house staff and 40+ freelancers. Grew revenue from £0 to £800,000 per annum within 2 years. Designed and project-managed a bespoke CMS for copywriting management.</div>
+                <div className="text-[16px] text-[#0f172a] mb-2 font-sans font-bold">Apple Copywriting Agency</div>
+                <div className="text-[16px] text-[#0f172a] leading-[1.6] font-sans">Built from a 1-man operation to 8 in-house staff and 40+ freelancers. Grew revenue from £0 to £800,000 per annum within 2 years. Designed and project-managed a bespoke CMS for copywriting management.</div>
               </div>
             </div>
 

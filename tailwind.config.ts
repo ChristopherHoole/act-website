@@ -32,7 +32,7 @@ const config: Config = {
       fontFamily: {
         serif: ["Georgia", "serif"],
         mono: ['"Courier New"', "monospace"],
-        sans: ["system-ui", "-apple-system", "sans-serif"],
+        sans: ["'Inter'", "system-ui", "-apple-system", "sans-serif"],
       },
       maxWidth: {
         content: "1200px",

@@ -7,60 +7,48 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What size accounts do you work with?",
-      answer: "£5k–£100k/month ad spend.\nYou need enough budget for the data to be meaningful and for A.C.T's insights to have impact."
+      question: "What type of role are you looking for?",
+      answer: "Contract, freelance or permanent. Remote-first, UK-based. Open to global companies."
     },
     {
-      question: "What do you NOT do?",
-      answer: "Social ads, SEO, creative production, landing page design.\nGoogle Ads only.\nI'm a specialist, not a generalist."
+      question: "What's your availability?",
+      answer: "Available immediately."
     },
     {
-      question: "How is this different from hiring an agency?",
-      answer: "At an agency, your account is managed by a junior exec across 30+ other accounts.\nWith me, you get 16 years of senior experience, maximum 4 clients, and a proprietary AI engine built specifically for this.\nNo account managers, no handoffs, no diluted attention."
+      question: "Do you work in-house or remotely?",
+      answer: "Remote-first. I've worked remotely for the last 16 years across agencies, in-house and consultancy."
     },
     {
-      question: "Is A.C.T a SaaS product I can buy?",
-      answer: "No.\nA.C.T is my internal tool.\nIt's my competitive advantage, not a product for sale.\nYou get access through working with me."
+      question: "What size budgets have you managed?",
+      answer: "£5k to £400k per month. 100+ accounts across 16 years. B2B and B2C."
+    },
+    {
+      question: "What industries have you worked in?",
+      answer: "Automotive (Lexus, Toyota), luxury travel, B2B (Virgin Media O2), ecommerce, property, financial services and telecoms."
+    },
+    {
+      question: "What campaign types do you cover?",
+      answer: "Search, Shopping, Performance Max, Display and Paid Social. A.C.T generates recommendations across all five."
+    },
+    {
+      question: "Do you only do Google Ads?",
+      answer: "Google Ads is my specialism, but I have hands-on experience with Meta, LinkedIn, TikTok, Taboola and Outbrain. I also set up analytics, tracking and CRM integrations — I think about the full impression-to-sale journey."
+    },
+    {
+      question: "Can you work alongside an existing team?",
+      answer: "Yes. I've worked as a sole operator, embedded in teams, and collaboratively with agencies. Flexible to the setup."
+    },
+    {
+      question: "How do you communicate and report?",
+      answer: "Weekly updates via Slack or email. Monthly plain-English reports. Full visibility into every change and decision. Happy to adapt to whatever reporting structure is already in place."
     },
     {
       question: "Can I see A.C.T in action?",
-      answer: "Yes.\nI demo it on the fit call.\nYou'll see the dashboard, recommendations, change log, and reporting live."
+      answer: "Yes. I can demo the dashboard, recommendations, change log and reporting on a call."
     },
     {
-      question: "What if A.C.T recommends something I disagree with?",
-      answer: "You have final say.\nA.C.T recommends, you decide.\nIf you reject a recommendation, I'll explain the reasoning and we'll discuss alternatives.\nNo blind automation."
-    },
-    {
-      question: "What if my performance drops while working with you?",
-      answer: "A.C.T's Radar module monitors every change made and automatically rolls back anything that causes KPI degradation.\nOn top of that, I review performance daily.\nIf something goes wrong, I know about it fast and I fix it fast — with a full audit trail of what happened and why."
-    },
-    {
-      question: "Can you take over an existing account or do you start from scratch?",
-      answer: "Both.\nMost clients come with an existing account.\nThe first 2 weeks are an audit — I find what's broken, what's wasted, and what's working.\nWe fix the foundation before touching spend.\nStarting from scratch follows the same process, just without the baggage."
-    },
-    {
-      question: "Do you need access to my Google Ads account?",
-      answer: "Yes.\nRead access to start — for the audit.\nThen standard admin access once we agree to work together.\nI use the Google Ads API to connect A.C.T directly to your account.\nYour credentials stay yours."
-    },
-    {
-      question: "Can you work with my existing agency or team?",
-      answer: "Yes.\nI work as freelancer (direct), partner (collaborative), or white-label (behind the scenes).\nFlexible models depending on your setup."
-    },
-    {
-      question: "How long is onboarding?",
-      answer: "2 weeks.\nAccount audit, tracking review, structure fixes, strategy alignment, then we're live.\nWe fix the foundation before pushing spend."
-    },
-    {
-      question: "How do you communicate and report progress?",
-      answer: "Monthly plain-English report: what changed, why, and what the outcome was.\nWeekly Slack or email updates on anything notable.\nYou always have visibility into A.C.T's recommendation log — every change is documented with reasoning and before/after data."
-    },
-    {
-      question: "How quickly will I see results?",
-      answer: "Account cleanup and structure fixes: 2–4 weeks.\nPerformance improvements: 4–8 weeks minimum — we need statistical significance.\nThis isn't magic.\nIt's rigorous testing and optimisation."
-    },
-    {
-      question: "What's the minimum commitment?",
-      answer: "3 months.\nThe first month is audit and foundation.\nMonths 2 and 3 is where performance improvement happens.\nGoogle Ads needs time and data to show results — anyone promising faster than that is either lucky or lying."
+      question: "What makes A.C.T different from other AI tools?",
+      answer: "A.C.T isn't a third-party tool — I built it from scratch with Python, Flask, DuckDB and the Google Ads API. It's tailored to how I work, with safety guardrails and human oversight built in. Nothing executes without my review."
     }
   ];
 
@@ -95,7 +83,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center text-left group"
               >
-                <span className="text-[20px] font-bold text-[#0f172a] pr-4">
+                <span className="text-[20px] font-bold text-[#0f172a] pr-4 font-mono">
                   {faq.question}
                 </span>
                 <span className="text-[20px] text-[#64748b] flex-shrink-0 transition-transform duration-200">
@@ -108,7 +96,7 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96 mt-3" : "max-h-0"
                 }`}
               >
-                <div className="text-[16px] text-[#64748b] leading-[1.7]">
+                <div className="text-[16px] text-[#0f172a] leading-[1.7] font-sans">
                   {faq.answer.split("\n").map((line, i) => (
                     <p key={i} className="mb-1 last:mb-0">{line}</p>
                   ))}

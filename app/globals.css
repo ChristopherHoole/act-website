@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,11 +25,11 @@
   
   /* Standard body text styles - use these site-wide */
   .text-body-dark {
-    @apply font-mono text-[18px] text-white leading-relaxed;
+    @apply font-sans text-[16px] text-white leading-relaxed;
   }
-  
+
   .text-body-light {
-    @apply font-mono text-[18px] text-[#0f172a] leading-relaxed;
+    @apply font-sans text-[16px] text-[#0f172a] leading-relaxed;
   }
   
   .animate-pulse-slow {
